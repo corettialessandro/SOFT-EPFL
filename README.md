@@ -4,9 +4,9 @@
 
 In this exercise we will see a *rare* example of algorithms for solving the quantum dynamical problem exactly.
 Let's consider a time-independent Hamiltonian and its associated time-dependent Schroedinger equation for a system of one particle in one dimension
-\[
+```math
 i\hbar\frac{d}{dt}|\psi> = \hat{H}|\psi> \quad \text{where} \quad \hat{H} = \frac{\hat{P}^2}{2m} + E(\hat{X})
-\]
+```
 We know that this equation admits at least a formal solution of the kind
 \[
 |\psi(t)> = \exp\biggl[-\frac{i}{\hbar}\hat{H}t\biggr]|\psi(0)>
