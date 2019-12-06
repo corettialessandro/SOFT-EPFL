@@ -76,6 +76,28 @@ or, in a more accurate form
 \[
 \exp[\hat{A} + \hat{B}] = \exp\biggl[\frac{\hat{B}}{2}\biggr]\exp[\hat{A}]\exp\biggl[\frac{\hat{B}}{2}\biggr] + \mathcal{O}([A,B]^3)
 \]
+Note that, in particular in this second form, the order of the operators $A$ and $B$ is not important, so that the break-up of the exponential can be carried on in both ways.
+Moreover, considering a small parameter $\varepsilon$ multiplying the sum $A + B$ we get the useful relation
+\[
+\exp[\varepsilon(\hat{A} + \hat{B})] = \exp\biggl[\varepsilon\frac{\hat{B}}{2}\biggr]\exp[\varepsilon\hat{A}]\exp\biggl[\varepsilon\frac{\hat{B}}{2}\biggr] + \mathcal{O}(\varepsilon^3[A,B]^3)
+\]
+It is now clear that we can now directly apply this break-up (known as second order Trotter break-up) to our short-time propagator to get
+\[
+\exp\biggl[-\frac{i}{\hbar}\biggl(\frac{\hat{P}^2}{2m} + E(\hat{X})\biggr)\varepsilon\biggr] = \exp\biggl[-\frac{i}{\hbar}E(\hat{X})\frac{\varepsilon}{2}\biggr]\exp\biggl[-\frac{i}{\hbar}\frac{\hat{P}^2}{2m}\varepsilon\biggr]\exp\biggl[-\frac{i}{\hbar}E(\hat{X})\frac{\varepsilon}{2}\biggr]
+\]
+This is an approximation, but we know up to what order it is accurate. And moreover, we are now in the situation of being able to solve, step by step, the *formal* solution of the time-dependent Schroedinger equation. Indeed, considering the first 'step' of the split of the whole solution we have
+\[
+\exp\biggl[-\frac{i}{\hbar}E(\hat{X})\frac{\varepsilon}{2}\biggr]\exp\biggl[-\frac{i}{\hbar}\frac{\hat{P}^2}{2m}\varepsilon\biggr]\exp\biggl[-\frac{i}{\hbar}E(\hat{X})\frac{\varepsilon}{2}\biggr]|x_1><x_0|\psi(0)>
+\]
+The action of the first bid of the short-time propagator is easy computed as
+\[
+\exp\biggl[-\frac{i}{\hbar}E(\hat{X})\frac{\varepsilon}{2}\biggr]\exp\biggl[-\frac{i}{\hbar}\frac{\hat{P}^2}{2m}\varepsilon\biggr]|x_1>\exp\biggl[-\frac{i}{\hbar}E(x_1)\frac{\varepsilon}{2}\biggr]<x_0|\psi(0)>
+\]
+Now we have a problem in principle as we cannot easily apply the operator $\hat{P}^2$ to the base vector $|x_1>$. We can nonetheless use a change of variable to switch to the momentum basis. This can be done through the insertion of a resolution of the identity in $p$ space:
+\[
+\exp\biggl[-\frac{i}{\hbar}E(\hat{X})\frac{\varepsilon}{2}\biggr]\int dp \exp\biggl[-\frac{i}{\hbar}\frac{\hat{P}^2}{2m}\varepsilon\biggr]|p><p|x_1>\exp\biggl[-\frac{i}{\hbar}E(x_1)\frac{\varepsilon}{2}\biggr]<x_0|\psi(0)>
+\]
+
 
 ##Split-Operator Fourier Transform (SOFT) program
 
